@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    
+    <meta charset="utf-8">
+    <title>C.Sandholm</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    
+    
+</head>
+    
+
+    
+    <header>
+        <img src="image/headerimage.png" alt="portrait" class="headerimage noPrint"> <!-- header bild -->
+        
+        <div class="navigation noPrint"> <!-- meny -->
+        
+            <ul> <!-- definierar lista -->
+                    <li><a href="index.html">HOME</a></li> <!-- lista element -->
+                    <li><a href="processanalys.html">PROCESSANALYS</a></li> <!-- lista element -->
+                    
+            </ul>
+    
+        </div>
+        
+    </header>
+    
+
+    
+    
+  <div class="processanalys"> <!-- stycke -->
+        
+        <img src="image/computer.png" alt="portrait" class="pa-image all-circular-images noPrint"> <!-- bild, stycke -->
+        
+        <h1>HMTL</h1>  <!-- rubrik ett -->
+      
+            <p> Först skapas en html fil med namn index.html. Den kommer att vara förstasidan på den nya webbplatsen. Två stycken html- filer skapas, index och den sida där processanalysen kommer att kunna läsas på. Den filen döps till processanalys.hmtl. CSS- filen, som kommer att styra sidornas utseende, skapas i samma mapp som html-filerna och döps till style.css. Jag utgår från kursens stilmallar för sidorna, men tar vissa friheter och korrigerar inte riktigt samma. I head skrivs charset=”utf-8” för att Å-Ä-Ö ska fungera i texten (W3Schools). I enlighet med kursens moduler och workshops ett och två länkas CSS till de två html-sidorna. Titeln, som syns på webbläsarens tabb, åtminstone i chrome, sätt till C.Sandholm. För att kunna använda googlefonts "sen" så länkas även den in i head.</p>
+                
+            <p>Header’n består av en bild med mitt namn, som länkas in genom img, och under header ska en meny placeras som användaren skiftar mellan de två sidorna med. I header läggs en div med klassen navigation (W3Schools). Det är i CSS som klasserna sedan ges sin stil. Menyn ska vara en lista med centrerad text, vars ord ska vara klickbara med musen för att ta användaren till respektive sida (W3Schools). ul-taggen tillsammans med li-taggen används för att skapa listan i HTML dokumentet. ul definerar oordnade listor och tillsammans med li skapas oordnade listor, varje li-tag är ett element i listan. </p>
+                
+            <p>På första sidan ska det finnas tre stycken områden med text och bilder som skiljer sig åt. Varje del får en div och klass tilldelad, samt en bild som länkas in. Sidofoten, en klass, ska innehålla tre delar med kontaktinformation som de också tilldelas klasser. För att kunna skilja på textens utseende sätts adress, e-post och telefon som h-taggar. Processanalysens html-dokument kopieras från index. Det enda som skiljer sig är styckena som tas bort och ersätts med en enda, som får sin egna klass eftersom detta stycket är ensamt, processanalysen, och ska ta upp stor del av sidan.
+            </p>
+        
+      
+            <h2>CSS</h2> <!-- rubrik två -->
+            
+            <p>En reset kopieras från en sida på webben och klistras in i CSS- dokumentet så att webbläsare inte korrigerar något (Meyerweb). Allt innehåll och utseende ska härstamma från html och css filerna. @font-face används för att länka in lokala font-filer som senare kan användas för att ändra form på text (W3Schools). Samtliga paragrafer inom body ges sin stil och en google font, sen. Float används för att motverka att texten rinner upp jämte bilderna. För att få bakgrundsbilden att skifta färg mellan vitt och grått så används en linear-gradient (W3Schools).  För att allt ska ligga centrerat i webbläsaren så sätts margin till auto, det ger lika mycket rum till vänster som höger. Det är inte önskvärt att sidorna blir så stora så att de kan sträckas ut i oändlighet, så en maxbredd på 1200px blir passande för innehållet och motverkar att all text blir utdragna för mycket till en enda linje. Header’n och dess bild får width 100% för att anpassas till body. </p>
+                
+            <p>Det finns en glipa mellan header-bilden och menyn, så topp marginalen för menyn, under ul, sätts till minus 3 pixlar för att få ett enhetligt utseende. Under li a, för att centrera elementens text används display: block, elementen blir blockelement på en ny rad som tar upp hela bredden och texten centreras (W3Schools). Font familjen sen som länkats in i hmtl- dokumentet används både i listor, för rubriker och text. Listan ges också egenskapen att skifta färg på bakgrund och text när man håller över med muspekaren. 
+            Bilderna i styckena ska vara cirklar. För att bäst anpassas till cirklar beskärs bilderna först i photoshop till kvadratiska bilder. De får en bredd och höjd i CSS och ges en border-radius på 50 % för att formas till en cirkel (Craig). En vit kant skapas genom en padding med bakgrundsfärgen vitt. Border-radius används också för bakgrunden i vänstra och högra textstycket lite extra stil. 
+            </p>
+                
+            <p>I @media är max bredden 945.33 pixlar. Valet är baserat på den punkt då styckena på index- sidan börjar gå in i varandra, texten blir allt för smal, och sidans stil håller inte längre. Från den punkten och nedåt i rutbredd gäller att styckena läggs under varandra, med full bredd och samma sidomarginaler. Sidofoten görs högre för att inte e-post delen ska falla under. Processanalysens text snyggas till med letter-spacing, line- height och text-indent (W3Schools). För att inte skriva ut bilder och fotnot så tilläggs en @media print, som ignorerar att skriva ut klassen noPrint vid utskrift (Manas). Bilder och fotnot tilldelas klassen. I referenslistan styrs radbyten men en br för att få referenserna uppradade (W3Schools).</p>
+      
+      
+  
+    
+            <h3>Referenser</h3>
+      
+            <p><br>Craig, William. Circular Images with CSS. FX Blog. https://www.webfx.com/blog/web-design/circular-images-css/ (Hämtad 2020-03-29)<br>
+                
+            Manas, Kumar. 2016. CodeProject. [Forum].https://www.codeproject.com/Questions/1082571/How-to-hide-a-images-on-a-page-while-printing-a-pa (Hämtad 2020-03-29)<br>
+                
+            Meyerweb. CSS Tools: Reset CSS. https://meyerweb.com/eric/tools/css/reset/ (Hämtad 2020-03-29)<br>
+                
+            W3Schools. HTML ul Tag. https://www.w3schools.com/tags/tag_ul.asp (Hämtad 2020-03-29)<br>
+                
+            W3Schools. CSS Navigation Bar. https://www.w3schools.com/css/css_navbar.asp (Hämtad 2020-03-29)<br>
+                
+            W3Schools. HMTL Unicode(UTF-8) Reference. https://www.w3schools.com/charsets/ref_html_utf8.asp (Hämtad 2020-03-29)<br>
+                
+            W3Schools. CSS Gradients. https://www.w3schools.com/css/css3_gradients.asp (Hämtad 2020-03-29)<br>
+                
+            W3Schools. CSS @font-face Rule. https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp (Hämtad 2020-03-29)<br>
+                
+            W3Schools.How To Center Images. https://www.w3schools.com/howto/howto_css_image_center.asp (Hämtad 2020-03-29)<br>
+                
+            W3School. CSS Display Property. https://www.w3schools.com/cssref/pr_class_display.asp (Hämtad 2020-03-29)<br>
+                
+            W3Schools. Text Spacing. https://www.w3schools.com/css/css_text_spacing.asp (Hämtad 2020-03-29)<br>
+                
+            W3School. HMTL br Tag. https://stackoverflow.com/questions/2703601/how-to-line-break-from-css-without-using-br (Hämtad 2020-03-29)<br>
+                
+      </p>
+      
+      <h3>Charles Sandholm</h3>
+            
+    </div>   
+      
+      
+        
+    <footer class="sidefoot noPrint"> <!-- sidofot rader -->
+        <div class="adress sidefoottext"> <!-- adress rader -->
+            <h4>Adress</h4>
+            <p>Lillgatan 15</p>
+            <p>123 45 Storhäng</p>
+        </div>
+        <div class="telefon sidefoottext"> <!-- telefon rader -->
+            <h5>Telefon</h5>
+            <p>012 123 78</p>
+            <p>123 456 789</p>
+        </div>
+        <div class="e-post sidefoottext"> <!-- e-post rader -->
+            <h6>E-post</h6>
+            <p>info@gregermania.se</p>
+        
+            <p>sales@gregerkommerigen.nu</p>
+        </div>
+        
+    </footer>
+    
+    
+
+    
